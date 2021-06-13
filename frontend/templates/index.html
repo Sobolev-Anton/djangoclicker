@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <meta charset="utf-8">
+    <title>Fireball clicker</title>
+</head>
+<body onload="getUser({{ user.id }})">
+
+<main>
+    <div class="clicker">
+        <div class="logout"><a href="/logout">LOGOUT</a></div>
+        <p class="text" id="user">%user%</p>
+        <p class="coins text">Fireball POWER: <span id="data">%coins%</span></p>
+        <input type="image" class="fireball" src="{% static 'images/fireball.png' %}" onclick="callClick()"
+               alt="clicker"/>
+    </div>
+
+    <div class="boosts-place">
+        <div class="status">
+            <p class="click-power text">Wizard power: <span id="click_power">%clickPower%</span></p>
+            <p class="auto-click-power text">Auto attack power:
+                <span id="auto_click_power"> {{ mainCycle.autoClickPower }} </span></p>
+        </div>
+        <div class="boost-wrapper" id="boost-wrapper"></div>
+    </div>
+</main>
+
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

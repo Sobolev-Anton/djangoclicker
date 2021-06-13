@@ -1,0 +1,114 @@
+main {
+    display: block;
+    justify-content: center;
+}
+
+.fireball {
+    opacity: 1;
+    width: 30em;
+    height: 30em;
+    transition: transform ease-out 1s;
+    position: center;
+}
+
+.fireball.boost {
+    opacity: 1;
+}
+
+.fireball:hover {
+    opacity: 0.8;
+}
+
+.fireball:active {
+    opacity: 1;
+}
+
+.fireball:disabled {
+    opacity: 0.4;
+}
+
+.boosts-place {
+    position: center;
+    padding: 200px;
+}
+
+.boost-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.clicker {
+    flex: 4 0;
+}
+
+.boost-holder {
+    display: flex;
+    background-color: #ac3cfc;
+    border-radius: 15px;
+    margin: 5px;
+    text-align: center;
+    max-height: 60px;
+}
+
+.boost-holder.auto-click {
+    background-color: aqua;
+}
+
+.boost-holder p,
+.fireball.boost {
+    margin: auto 10px auto 0;
+}
+
+.fireball.boost {
+    width: 60px;
+    height: 60px;
+    border-bottom-left-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.boost-holder.auto-click .fireball.boost {
+    width: 80px;
+    height: 45px;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+}
+
+.click-power, .auto-click-power {
+    margin: 0;
+    padding: 10px 10px 5px 10px;
+    font-size: 30px;
+}
+
+.clicker p, .logout {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.coins {
+    font-size: 35px;
+
+}
+
+.clicker .fireball, .coins {
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+
+body {
+    background: url('/static/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text, p label {
+    text-shadow: black 1px 1px 0, black -1px -1px 0,
+    black -1px 1px 0, black 1px -1px 0;
+    color: #ac3cfc;
+}
